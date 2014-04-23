@@ -16,7 +16,7 @@ describe('EdgesFilter', function() {
       },
       {
         requirements: [
-          { mode: 'rank', name: null, value: 'Novice'}
+          { mode: 'rank', name: null, value: 'Novice' }
         ],
         category: { name: 'second' }
       }
@@ -40,8 +40,8 @@ describe('EdgesFilter', function() {
   });
 
   describe('Rank filter', function() {
-    it('filters by rank', function() {
-      filterBy.category.name = 'All';
+    it('filter by rank', function() {
+      filterBy.category.name == 'All';
       expect(filter(edges, filterBy).length).toEqual(1);
     });
   });

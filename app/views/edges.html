@@ -8,10 +8,10 @@
     <label for="">Categories</label>
     <select name="category" ng-model="filterBy.category" ng-options="c.name for c in categories" class="form-control"></select>
   </div>
-  <div class="form-group col-xs-3">
-    <label for="">Rank</label>
-  <select name="rank" ng-model="filterBy.rank" ng-options="r.name for r in ranks" class="form-control"></select>
-  </div>
+      <div class="form-group col-xs-4">
+        <label for="">Rank</label>
+        <select class="form-control" name="rank" ng-model="filterBy.rank" ng-options="c.name for c in ranks"></select>
+      </div>
 </div>
 <ul>
   <li ng-repeat-start="edge in edges | filter: {name: filterBy.search} | edges: filterBy" ng-click="selectedEdge(edge)">
