@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('swFrontApp').service('edges', function() {
-  this.query = function() {
+angular.module('swFrontApp').factory('edges', function($resource) {
+  return $resource('/api/edges');
+  /*this.query = function() {
     return [
       {
         name: 'Attractive',
@@ -82,5 +83,5 @@ angular.module('swFrontApp').service('edges', function() {
         ]
       }
     ];
-  }
+  }*/
 });
